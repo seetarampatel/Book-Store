@@ -17,7 +17,7 @@
 
 <hr>
 <h3>Home Screen Lookup</h3>
-<kbd><p><img src="/assets/images/Home_Screen_Lookup"></p></kbd>
+<kbd><p><img src="/assets/images/Home_Screen_Lookup.png"></p></kbd>
 
 <hr>
 <h3>Create Book Lookup</h3>
