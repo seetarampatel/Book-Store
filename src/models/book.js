@@ -1,19 +1,22 @@
 import mongoose from 'mongoose';
 
 // Schema for book collection
-const bookSchema = new mongoose.Schema({
-    title: String,
-    description: String,
+const BookSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        required: true,
+    },
+    description: {
+        type: String,
+        required: true,
+    },
     image: String,
     genre: String,
-    review: Number
+    rating: Number,
+    created: {type: Date, default: Date.now},
 }, {
     timestamp: true,
     collection: 'Books',
 });
 
-// Bind the Book in bookSchema format
-const Book = mongoose.model('Book', bookSchema);
-
-// export the book
-export default Book;
+module.exports = mongoose.model('Book', BookSchema);

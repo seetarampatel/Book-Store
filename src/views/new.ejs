@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="row">
+    <h1 class="text-center">New Book</h1>
+    <div class="col-6 offset-3">
+        <form action="/books" method="POST">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="Book[title]">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="genre">Genre</label>
+                <input class="form-control" type="text" id="genre" name="Book[genre]">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="rating">Rating</label>
+                <input class="form-control" type="number" id="rating" name="Book[rating]" min="1" max="10">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="image">Image Url</label>
+                <input class="form-control" type="text" id="image" name="Book[image]">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="Book[description]"></textarea>
+            </div>
+            <div class="mb-3">
+                <input class="btn btn-success" type="submit" value="Add Book" />
+            </div>
+        </form>
+        <a href="/books">All Books</a>
+    </div>
+</div>
