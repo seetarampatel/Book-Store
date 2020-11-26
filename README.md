@@ -3,7 +3,7 @@
 <p>This is a book store application, developed using JavaScript Frameworks such as Node.js, Express, and MongoDB.</p> 
 <p>You can create, read, update, and delete amazing books!</p>
 
-<hr>
+<hr> 
 <p> Please download project and add dependencies described in package.json. Create .env file and use the URL described in below.</p>
 
 <hr>
@@ -11,7 +11,7 @@
 <p>DATABASE_URL=mongodb+srv://book-store-admin:cb1NYiyAcTS5wdwM@cluster0.zctjv.mongodb.net/book?retryWrites=true&w=majority</p>
 
 <hr>
-<h3>MongoDB Lookup</h3>
+<h3>Books Schema Lookup</h3>
 <kbd><p><img src="/assets/images/Database_Lookup.png"></p></kbd>
 
 <hr>
@@ -45,3 +45,7 @@
 <hr>
 <h3>Logout Lookup</h3>
 <kbd><p><img src="/assets/images/Logout_Lookup.png"></p></kbd>
+
+<hr>
+<h3>Users Schema Lookup</h3>
+<kbd><p><img src="/assets/images/Users_Database_Lookup.png"></p></kbd>
