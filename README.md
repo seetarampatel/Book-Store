@@ -11,6 +11,11 @@
 <p>DATABASE_URL=mongodb+srv://book-store-admin:cb1NYiyAcTS5wdwM@cluster0.zctjv.mongodb.net/book?retryWrites=true&w=majority</p>
 
 <hr>
+<p>Technologies used in the project: </p>
+<p>Node.js<br /> Express<br /> MongoDB<br /> Bootstrap<br /> ejs<br /> ejsMate<br /> 
+Passport Authentication<br /> </p>
+
+<hr>
 <h3>Books Schema Lookup</h3>
 <kbd><p><img src="/assets/images/Database_Lookup.png"></p></kbd>
 
