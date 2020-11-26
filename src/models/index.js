@@ -2,6 +2,7 @@
 import 'dotenv/config'
 import mongoose from 'mongoose';
 import Book from './book';
+import User from './user';
 
 // Connection to the database
 const connectDb = () => {
@@ -16,7 +17,7 @@ const connectDb = () => {
 };
 
 // Defing models 
-const models = {Book};
+const models = {Book, User};
 
 // Exporting database connection and models
 export {connectDb};
