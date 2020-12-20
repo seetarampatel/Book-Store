@@ -54,3 +54,13 @@ Passport Authentication<br /> </p>
 <hr>
 <h3>Users Schema Lookup</h3>
 <kbd><p><img src="/assets/images/Users_Database_Lookup.png"></p></kbd>
+
+<hr>
+<h3>API Lookup</h3>
+<kbd><p><img src="/assets/images/API_GET_1.png"></p></kbd>
+<hr>
+<kbd><p><img src="/assets/images/API_GET_2.png"></p></kbd>
+<hr>
+<kbd><p><img src="/assets/images/API_POST.png"></p></kbd>
+<hr>
+<kbd><p><img src="/assets/images/API_DELETE.png"></p></kbd>
