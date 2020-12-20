@@ -1,5 +1,6 @@
 {
   "name": "book-store",
+  "type": "module",
   "version": "1.0.0",
   "description": "Book Store Application using Web Frameworks and APIs",
   "main": "app.js",
