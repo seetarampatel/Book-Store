@@ -74,7 +74,7 @@ const isLoggedIn = (req, res, next) => {
     next();
 }
 
-/**********************************/
+/***********************************************************/
 // GET method - redirect to the books page
 app.get('/', (req, res) => {
     res.redirect('/books');
@@ -93,7 +93,7 @@ app.get('/books/new', isLoggedIn, (req, res) => {
 
 // GET method - display the details of particular book based on id
 app.get("/books/:id", (req, res) => {
-    Book.findById(req.params.id, function(err, foundbook){
+    Book.findById(req.params.id, (err, foundbook) =>{
         if(err){
             res.redirect("/books");
         } else {
@@ -101,6 +101,7 @@ app.get("/books/:id", (req, res) => {
         }
     })
 });
+
 
 // POST method - save the new book and redirect user to the detailed book page
 app.post('/books', (req, res) => {
@@ -142,6 +143,70 @@ app.delete("/books/:id", isLoggedIn,  (req, res) => {
     })
  });
 
+ /*************************************************************/
+ // API Route - Get method
+app.get('/api/books', async (req, res) => {
+    const apiBooks = await Book.find({});
+    res.send(apiBooks);
+});
+
+
+// API Route - Get method
+app.get('/api/books/:id', (req, res) => {
+    Book.findById(req.params.id, (err, apifoundbook) =>{
+        if(err){
+            res.status(404).send('The course with given id was not found');
+        } else {
+            res.send(apifoundbook);        
+        }
+    });
+});
+
+// API Route - POST method
+app.post('/api/books', (req, res) => {
+    const apiBook = new Book ({
+        title : req.body.title,
+        description : req.body.description,
+        image: req.body.image,
+        genre: req.body.genre,
+        rating: req.body.rating
+    });
+    try {
+        const savedBook = apiBook.save();
+        res.json(savedBook)
+    } catch (err) {
+        res.json( {message: err});
+    }
+})
+
+// API Route - PUT Method
+app.patch("/api/books/:id", async (req, res) => {
+    try {
+        res.book.title =  req.body.title
+        res.book.description = req.body.description
+        res.book.image = req.body.image
+        res.book.genre = req.body.genre
+        res.book.rating = req.body.rating
+        const updateBook = await res.book.save();
+        res.json(updateBook);
+    }
+    catch (err) {
+        res.json({ message: err });
+    }
+ });
+
+// API Route - DELETE Method
+ app.delete("/api/books/:id", async (req, res) => {
+    try {
+        const removedBook = await Book.remove({_id: req.params.id});
+        res.json(removedBook);
+    }
+    catch (err) {
+        res.json({ message: err });
+    }
+ });
+
+/****************************************************************/
 // GET method - render the register page
 app.get('/register', (req, res) => {
     res.render('register');
