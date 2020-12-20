@@ -1,5 +1,5 @@
 // Imports
-import 'dotenv/config'
+require('dotenv').config;
 import mongoose from 'mongoose';
 import Book from './book';
 import User from './user';
